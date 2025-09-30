@@ -144,7 +144,7 @@ export default function Header() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.2 }}
-          className="md:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-md border-t border-border shadow-lg"
+          className="md:hidden absolute top-full left-0 w-full bg-slate-900/95 dark:bg-slate-800/95 backdrop-blur-lg border-t border-yellow-500/20 shadow-xl"
         >
           <div className="px-4 py-4 space-y-2">
             <Link
