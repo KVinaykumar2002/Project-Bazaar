@@ -18,7 +18,7 @@ export default function Footer() {
         </nav>
         <p className="mt-10 text-center text-sm leading-5 text-muted-foreground">
           <Link to="/">
-          Designed & Developed with ❤️ by Team Web cros
+          Designed & Developed with ❤️ by Team OptiWebrix
           </Link>
         </p>
       </div>
