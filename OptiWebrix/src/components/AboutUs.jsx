@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 
-import RajeshImage from "../assets/rajeshImage.png"
-import RajibImage from "../assets/rajibImage.jpg"
+
+
 import BidyadharImage from "../assets/bidyaImage.jpg"
 
 import teamIllustration from "../assets/team_illustration.jpeg"
@@ -80,7 +80,7 @@ export default function AboutPage() {
       role: "Lead Developer",
       description: "I handle all aspects of development, from front-end to back-end integration. With expertise in React, Next.js, and modern JavaScript frameworks, I ensure our projects are built with clean, maintainable code that performs exceptionally well.",
       skills: ["React", "Next.js", "JavaScript", "Tailwind CSS", "Node.js"],
-      image: RajeshImage,
+      image: BidyadharImage,
       social: {
         github: "https://github.com/talaganaRajesh",
         linkedin: "https://www.linkedin.com/in/talagana-rajesh-75a546289/",
@@ -92,7 +92,7 @@ export default function AboutPage() {
       role: "Client Relations Manager",
       description: "I oversee client relationships and project management. My focus is on understanding client needs, maintaining clear communication throughout projects, and ensuring we exceed expectations with every delivery.",
       skills: ["Project Management", "Client Relations", "Requirements Analysis", "Agile Methodology"],
-      image: RajibImage,
+      image: BidyadharImage,
       social: {
         github: "https://github.com/rajibusername",
         linkedin: "https://linkedin.com/in/rajibprofile",

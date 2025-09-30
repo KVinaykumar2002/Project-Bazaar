@@ -3,58 +3,58 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 
-import agencyImage from "../assets/agencyDemo.png"
-import photographyImage from "../assets/photographyDemo.png"
-import zyskImage from "../assets/digitalDemo.png"
-import photographyImage2 from "../assets/photographyDemo2.png"
-import getmaterialImage from "../assets/getmaterial.png"
-import photographyImage3 from "../assets/photography2.png"
+import PhotographyImage from "../assets/Ariffront.png"
+import CarwebsiteImage from "../assets/Chalyatifront.png"
+import CafefrontImage from "../assets/Cafefront.png"
+import RoyalBidFrontimage from "../assets/Royalbidfront.png"
+import DvintageImage from "../assets/Dvintagefront.png"
+import HoopsfrontImage from "../assets/Hoopsfront.png"
 
 const projects = [
   {
     id: 1,
-    title: "Photography website",
-    description: "Minimalist design for a photography portfolio",
-    imageUrl: photographyImage2,
-    path:"http://mspractice.wuaze.com/"
+    title: "Photography Website",
+    description: "A visually striking portfolio website to showcase photography work with a clean and minimalist design.",
+    imageUrl: PhotographyImage,
+    path:"https://arifphotography.in/"
   },
   {
     id: 2,
-    title: "Photography portfolio",
-    description: "Elegant online presence for a luxury photography studio",
-    imageUrl:  photographyImage,
-    path:"https://lemonstudio.vercel.app/"
+    title: "Car Website",
+    description: "A stylish and responsive website designed to highlight luxury cars with an elegant online presence.",
+    imageUrl: CarwebsiteImage,
+    path:"https://www.chalyati.com/"
   },
   {
     id: 3,
-    title: "ZYSK Technology",
-    description: "User-friendly website for a digital solutions agency",
-    imageUrl: zyskImage,
-    path:"https://zysk-webd.vercel.app/"
+    title: "Dr. Chai Cafe Website",
+    description: "An inviting website for Dr. Chai Cafe, combining modern design with user-friendly navigation to attract cafe lovers.",
+    imageUrl: CafefrontImage,
+    path:"https://chaicafedev.netlify.app/"
   },
   {
     id: 4,
-    title: "Agency website",
-    description: "Clean and modern visual communication for an agency",
-    imageUrl: agencyImage,
-    path:"https://webcros.vercel.app/"
+    title: "Bid Auction Website",
+    description: "An interactive and modern website for online auctions, enabling users to bid and explore items seamlessly.",
+    imageUrl: RoyalBidFrontimage,
+    path:"https://royalbidauction.netlify.app/"
   },
   {
     id: 5,
-    title: "Software platform",
-    description: "A platform to share and get notes for students",
-    imageUrl: getmaterialImage,
-    path:"https://getmaterial.vercel.app/"
+    title: "D’Vintage Spices Website",
+    description: "A vibrant website for D’Vintage Spices, showcasing premium spices with an elegant and traditional aesthetic.",
+    imageUrl: DvintageImage,
+    path:"https://dvintage-spices.netlify.app/"
   },
   {
     id: 6,
-    title: "Photography website",
-    description: "Minimalist design for a photography portfolio",
-    imageUrl: photographyImage3,
-    path:"https://photofills.vercel.app/"
+    title: "Hoops Website",
+    description: "A dynamic website for Hoops, designed with engaging visuals and smooth user experience for sports enthusiasts.",
+    imageUrl: HoopsfrontImage,
+    path:"https://deluxe-gumption-e4e2c7.netlify.app/"
   },
- 
 ]
+
 
 
 export default function PortfolioGrid() {
