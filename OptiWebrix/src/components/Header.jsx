@@ -68,9 +68,13 @@ export default function Header() {
                 isScrolled 
                   ? "lg:ml-32 h-6 sm:h-8" 
                   : "h-8 sm:h-12"
-              } w-auto`}
+              } w-auto object-contain`}
               src={theme === "dark" ? logo : logoBlack}
-              alt="WC"
+              alt="WebCross Logo"
+              onError={(e) => {
+                console.log('Logo failed to load:', e.target.src);
+                e.target.style.display = 'none';
+              }}
             />
             <h1 className={`font-bold transition-all ${
               isScrolled 
