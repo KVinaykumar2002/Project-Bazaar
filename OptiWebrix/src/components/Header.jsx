@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { useTheme } from "../components/theme-provider"
 import { motion } from "framer-motion"
-import { MoonIcon, SunIcon } from "@heroicons/react/24/outline"
+import { MoonIcon, SunIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 
 import logo from "../assets/webcross-white-logo.png"
 import logoBlack from "../assets/webcross-logo.png"
@@ -14,6 +14,7 @@ export default function Header() {
   const { theme, setTheme } = useTheme()
   const [activeTab, setActiveTab] = useState("")
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => setMounted(true), [])
 
@@ -40,6 +41,12 @@ export default function Header() {
   const handleTabClick = (tab) => {
     setActiveTab(tab)
     localStorage.setItem("activeTab", tab)
+    setIsMobileMenuOpen(false) // Close mobile menu when tab is clicked
+  }
+
+  // Toggle mobile menu
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
   }
 
   return (
@@ -55,17 +62,26 @@ export default function Header() {
         <motion.div
           className="flex lg:flex-1 transition-all"
         >
-          <a onClick={handleTabClick} href="/" className="-m-1.5 p-1.5 flex items-center gap-x-2">
+          <a onClick={() => handleTabClick("Home")} href="/" className="-m-1.5 p-1.5 flex items-center gap-x-2">
             <img
-              className={`transition-all duration-300 ${isScrolled ? "ml-32 h-8" : "h-12"} w-auto`}
+              className={`transition-all duration-300 ${
+                isScrolled 
+                  ? "lg:ml-32 h-6 sm:h-8" 
+                  : "h-8 sm:h-12"
+              } w-auto`}
               src={theme === "dark" ? logo : logoBlack}
               alt="WC"
             />
-            <h1 className={`font-bold transition-all ${isScrolled ? "text-lg" : "text-xl"}`}>OptiWebrix</h1>
+            <h1 className={`font-bold transition-all ${
+              isScrolled 
+                ? "text-base sm:text-lg" 
+                : "text-lg sm:text-xl"
+            }`}>OptiWebrix</h1>
           </a>
         </motion.div>
 
-        <div className="flex justify-center items-center gap-x-12 transition-all duration-700">
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex justify-center items-center gap-x-12 transition-all duration-700">
         <Link
               to="/"
               onClick={() => handleTabClick("Home")}
@@ -89,8 +105,23 @@ export default function Header() {
           ))}
         </div>
 
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
+          <button
+            onClick={toggleMobileMenu}
+            className="p-2 rounded-md text-foreground hover:text-yellow-600 transition-colors"
+            aria-label="Toggle mobile menu"
+          >
+            {isMobileMenuOpen ? (
+              <XMarkIcon className="w-6 h-6" />
+            ) : (
+              <Bars3Icon className="w-6 h-6" />
+            )}
+          </button>
+        </div>
+
         <motion.div
-          className="flex flex-1 justify-end transition-all duration-300"
+          className="hidden md:flex flex-1 justify-end transition-all duration-300"
           animate={{ scale: isScrolled ? 0.85 : 1 }}
         >
           {mounted && (
@@ -105,6 +136,65 @@ export default function Header() {
           )}
         </motion.div>
       </nav>
+
+      {/* Mobile Menu Dropdown */}
+      {isMobileMenuOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.2 }}
+          className="md:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-md border-t border-border shadow-lg"
+        >
+          <div className="px-4 py-4 space-y-2">
+            <Link
+              to="/"
+              onClick={() => handleTabClick("Home")}
+              className={`block px-4 py-3 rounded-md text-sm font-semibold transition-all ${
+                activeTab === "Home" 
+                  ? "text-yellow-500 bg-yellow-500/10" 
+                  : "text-foreground hover:text-yellow-600 hover:bg-yellow-500/5"
+              }`}
+            >
+              Home
+            </Link>
+            {["Work", "About", "Contact"].map((tab) => (
+              <Link
+                key={tab}
+                to={`${tab.toLowerCase()}`}
+                onClick={() => handleTabClick(tab)}
+                className={`block px-4 py-3 rounded-md text-sm font-semibold transition-all ${
+                  activeTab === tab 
+                    ? "text-yellow-500 bg-yellow-500/10" 
+                    : "text-foreground hover:text-yellow-600 hover:bg-yellow-500/5"
+                }`}
+              >
+                {tab}
+              </Link>
+            ))}
+            {mounted && (
+              <div className="pt-2 border-t border-border">
+                <button
+                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                  className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-md text-sm font-semibold text-foreground hover:text-yellow-600 hover:bg-yellow-500/5 transition-all"
+                >
+                  {theme === "dark" ? (
+                    <>
+                      <SunIcon className="w-5 h-5" />
+                      Light Mode
+                    </>
+                  ) : (
+                    <>
+                      <MoonIcon className="w-5 h-5" />
+                      Dark Mode
+                    </>
+                  )}
+                </button>
+              </div>
+            )}
+          </div>
+        </motion.div>
+      )}
     </motion.header>
   )
 }
