@@ -4,8 +4,6 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 
 
-
-import BidyadharImage from "../assets/bidyaImage.jpg"
 import VinayImage from "../assets/Vinay.jpeg"
 import SharanImage from "../assets/Sharan.jpeg"
 import teamIllustration from "../assets/team_illustration.jpeg"
