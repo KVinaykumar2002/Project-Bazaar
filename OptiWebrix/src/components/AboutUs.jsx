@@ -6,7 +6,8 @@ import { motion } from "framer-motion"
 
 
 import BidyadharImage from "../assets/bidyaImage.jpg"
-
+import VinayImage from "../assets/Vinay.jpeg"
+import SharanImage from "../assets/Sharan.jpeg"
 import teamIllustration from "../assets/team_illustration.jpeg"
 import teamIllustration2 from "../assets/team_illustration_2.jpeg"
 
@@ -76,39 +77,27 @@ export default function AboutPage() {
 
   const teamMembers = [
     {
-      name: "Rajesh",
-      role: "Lead Developer",
+      name: "Sharan",
+      role: "Founder & Lead Developer",
       description: "I handle all aspects of development, from front-end to back-end integration. With expertise in React, Next.js, and modern JavaScript frameworks, I ensure our projects are built with clean, maintainable code that performs exceptionally well.",
-      skills: ["React", "Next.js", "JavaScript", "Tailwind CSS", "Node.js"],
-      image: BidyadharImage,
+      skills: ["React", "Next.js", "JavaScript", "Tailwind CSS", "Node.js", "AWS", "Spring Boot", "Postgres", "MongoDB", "Docker", "Git", "Jira", "Github", "Gitlab", "Visual Studio Code", "Android Studio", "SonarQube", "Figma"],
+      image: SharanImage,
       social: {
-        github: "https://github.com/talaganaRajesh",
-        linkedin: "https://www.linkedin.com/in/talagana-rajesh-75a546289/",
-        twitter: "https://x.com/Rajeshtalagana"
+        github: "https://github.com/medamonisharan",
+        linkedin: "https://www.linkedin.com/in/sharan-medamoni/",
+        twitter: "https://www.linkedin.com/in/sharan-medamoni/"
       }
     },
     {
-      name: "Rajib",
-      role: "Client Relations Manager",
+      name: "Vinay",
+      role: "Co-Founder & Client Relations Manager",
       description: "I oversee client relationships and project management. My focus is on understanding client needs, maintaining clear communication throughout projects, and ensuring we exceed expectations with every delivery.",
       skills: ["Project Management", "Client Relations", "Requirements Analysis", "Agile Methodology"],
-      image: BidyadharImage,
+      image: VinayImage,
       social: {
-        github: "https://github.com/rajibusername",
-        linkedin: "https://linkedin.com/in/rajibprofile",
-        twitter: "https://twitter.com/rajibhandle"
-      }
-    },
-    {
-      name: "Bidyadhar",
-      role: "SEO & Database Specialist",
-      description: "I specialize in SEO optimization and database architecture. My work ensures our clients' websites rank well in search engines like Google and have robust, efficient database systems that scale with their business growth.",
-      skills: ["SEO", "Database Design", "MongoDB", "PostgreSQL", "Analytics"],
-      image: BidyadharImage,
-      social: {
-        github: "https://github.com/bidyadharusername",
-        linkedin: "https://linkedin.com/in/bidyadharprofile",
-        twitter: "https://twitter.com/bidyadharhandle"
+        github: "https://github.com/KVinaykumar2002",
+        linkedin: "https://www.linkedin.com/in/kalakonda-vinay-7a378b228/",
+        twitter: "https://www.linkedin.com/in/kalakonda-vinay-7a378b228/"
       }
     }
   ]
@@ -229,12 +218,12 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="flex flex-col md:flex-row justify-center items-center gap-8 max-w-4xl mx-auto">
               {teamMembers.map((member, index) => (
                 <motion.div
                   key={index}
                   variants={fadeIn}
-                  className="bg-white dark:bg-zinc-800 rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2"
+                  className="bg-white dark:bg-zinc-800 rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2 w-full max-w-sm"
                 >
                   <div className="h-80 overflow-hidden">
                     <img
@@ -321,10 +310,10 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center max-w-6xl mx-auto">
               <motion.div
                 variants={fadeIn}
-                className="bg-white dark:bg-zinc-800 rounded-2xl p-8 shadow-lg"
+                className="bg-white dark:bg-zinc-800 rounded-2xl p-8 shadow-lg w-full max-w-sm"
               >
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                   <span className="text-primary text-2xl">1</span>
@@ -337,7 +326,7 @@ export default function AboutPage() {
               </motion.div>
               <motion.div
                 variants={fadeIn}
-                className="bg-white dark:bg-zinc-800 rounded-2xl p-8 shadow-lg"
+                className="bg-white dark:bg-zinc-800 rounded-2xl p-8 shadow-lg w-full max-w-sm"
               >
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                   <span className="text-primary text-2xl">2</span>
@@ -350,7 +339,7 @@ export default function AboutPage() {
               </motion.div>
               <motion.div
                 variants={fadeIn}
-                className="bg-white dark:bg-zinc-800 rounded-2xl p-8 shadow-lg"
+                className="bg-white dark:bg-zinc-800 rounded-2xl p-8 shadow-lg w-full max-w-sm"
               >
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6">
                   <span className="text-primary text-2xl">3</span>
