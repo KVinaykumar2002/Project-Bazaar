@@ -24,7 +24,7 @@ const formSchema = z.object({
 })
 
 // Backend API URL - Update this to your deployed backend URL
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+const API_URL = 'https://project-bazaar.onrender.com';
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false)
