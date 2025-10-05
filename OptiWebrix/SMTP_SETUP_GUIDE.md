@@ -6,7 +6,7 @@ Your contact forms have been successfully integrated with a custom SMTP backend!
 
 ### Backend (New)
 - Created a Node.js/Express server with Nodemailer integration
-- Location: `OptiWebrix/server/`
+- Location: `OptiWebrix/backend/`
 - SMTP-based email sending with HTML templates
 
 ### Frontend (Updated)
@@ -154,7 +154,7 @@ Expected response:
 
 2. **Render**
    - Connect GitHub repository
-   - Set root directory to `server/`
+   - Set root directory to `backend/`
    - Add environment variables
    - Deploy
 
@@ -188,7 +188,7 @@ lsof -ti:5000 | xargs kill
 
 ### CORS Errors
 - Backend has CORS enabled for all origins in development
-- For production, update CORS settings in `server/server.js`
+- For production, update CORS settings in `backend/server.js`
 
 ### Email Not Sending
 - ✅ Check SMTP credentials
@@ -205,14 +205,14 @@ lsof -ti:5000 | xargs kill
 
 ```
 OptiWebrix/
-├── server/                          # Backend server
+├── backend/                         # Backend server
 │   ├── server.js                   # Main server file
 │   ├── package.json                # Backend dependencies
 │   ├── .env                        # Environment variables (create this)
 │   ├── env.example                 # Example environment file
 │   ├── .gitignore                  # Git ignore file
 │   └── README.md                   # Backend documentation
-├── src/
+├── frontend/src/
 │   └── components/
 │       ├── Contact.jsx             # Updated to use SMTP backend
 │       └── ContactForm.jsx         # Updated to use SMTP backend
@@ -234,11 +234,11 @@ OptiWebrix/
 2. Check browser console for frontend errors
 3. Verify all environment variables are set correctly
 4. Test the API endpoint directly with curl
-5. Refer to the detailed `server/README.md`
+5. Refer to the detailed `backend/README.md`
 
 ## Email Template Customization
 
-The email template is in `server/server.js`. You can customize:
+The email template is in `backend/server.js`. You can customize:
 - HTML styling
 - Email layout
 - Subject line

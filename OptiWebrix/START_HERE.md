@@ -8,10 +8,10 @@ Your contact forms have been integrated with a custom SMTP email server! The int
 
 ### 1️⃣ Configure Your Email (Most Important!)
 
-Open `OptiWebrix/server/env.example` and save it as `.env` with your details:
+Open `OptiWebrix/backend/env.example` and save it as `.env` with your details:
 
 ```bash
-cd OptiWebrix/server
+cd OptiWebrix/backend
 cp env.example .env
 # Then edit .env with your email credentials
 ```
@@ -45,13 +45,13 @@ npm run dev:all
 
 Terminal 1 (Backend):
 ```bash
-cd OptiWebrix/server
+cd OptiWebrix/backend
 npm run dev
 ```
 
 Terminal 2 (Frontend):
 ```bash
-cd OptiWebrix
+cd OptiWebrix/frontend
 npm run dev
 ```
 
@@ -66,15 +66,19 @@ npm run dev
 
 ```
 OptiWebrix/
-├── server/                    # ← NEW! Backend SMTP server
+├── backend/                   # ← Backend SMTP server
 │   ├── server.js             # Express server with Nodemailer
 │   ├── package.json          # Backend dependencies
 │   ├── env.example           # Example environment file
 │   └── README.md             # Detailed backend docs
 │
-├── src/components/
-│   ├── Contact.jsx           # ✏️ UPDATED - Uses SMTP backend
-│   └── ContactForm.jsx       # ✏️ UPDATED - Uses SMTP backend
+├── frontend/                  # ← Frontend React application
+│   ├── src/
+│   │   └── components/
+│   │       ├── Contact.jsx           # ✏️ UPDATED - Uses SMTP backend
+│   │       └── ContactForm.jsx       # ✏️ UPDATED - Uses SMTP backend
+│   ├── package.json          # Frontend dependencies
+│   └── README.md             # Frontend documentation
 │
 ├── SMTP_SETUP_GUIDE.md       # Complete setup guide
 └── START_HERE.md             # This file
@@ -120,8 +124,8 @@ curl -X POST http://localhost:5000/api/send-email \
 - ✅ Check SMTP credentials are correct
 
 ### Backend won't start
-- ✅ Make sure `.env` file exists in `server/` directory
-- ✅ Run `npm install` in `server/` directory
+- ✅ Make sure `.env` file exists in `backend/` directory
+- ✅ Run `npm install` in `backend/` directory
 - ✅ Check port 5000 isn't already in use
 
 ### Frontend can't connect
@@ -137,19 +141,19 @@ curl -X POST http://localhost:5000/api/send-email \
 ## 📚 Documentation
 
 - **Full Setup Guide:** `SMTP_SETUP_GUIDE.md`
-- **Backend Docs:** `server/README.md`
-- **Deployment Guide:** See `server/README.md`
+- **Backend Docs:** `backend/README.md`
+- **Deployment Guide:** See `backend/README.md`
 
 ## 🎨 Customization
 
 ### Change Email Template
-Edit `server/server.js` → Look for `mailOptions.html`
+Edit `backend/server.js` → Look for `mailOptions.html`
 
 ### Change Recipient
-Edit `server/.env` → Update `RECIPIENT_EMAIL`
+Edit `backend/.env` → Update `RECIPIENT_EMAIL`
 
 ### Change Port
-Edit `server/.env` → Update `PORT`
+Edit `backend/.env` → Update `PORT`
 
 ## 🚀 Next Steps
 

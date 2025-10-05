@@ -15,13 +15,13 @@ This is the backend server for OptiWebrix contact form with SMTP integration usi
 ### 1. Install Dependencies
 
 ```bash
-cd server
+cd backend
 npm install
 ```
 
 ### 2. Configure Environment Variables
 
-Create a `.env` file in the `server` directory by copying the example file:
+Create a `.env` file in the `backend` directory by copying the example file:
 
 ```bash
 cp env.example .env
@@ -85,7 +85,7 @@ Production mode:
 npm start
 ```
 
-The server will run on `http://localhost:5000` (or your configured PORT).
+The server will run on `http://localhost:3001` (or your configured PORT).
 
 ## API Endpoints
 
@@ -137,7 +137,7 @@ The frontend is already configured to use this backend. Make sure to:
 
 1. Update the `VITE_API_URL` environment variable in your frontend `.env` file:
    ```env
-   VITE_API_URL=http://localhost:5000
+   VITE_API_URL=http://localhost:3001
    ```
 
 2. For production, update it to your deployed backend URL:
@@ -176,7 +176,7 @@ The frontend is already configured to use this backend. Make sure to:
 Test the API using curl:
 
 ```bash
-curl -X POST http://localhost:5000/api/send-email \
+curl -X POST http://localhost:3001/api/send-email \
   -H "Content-Type: application/json" \
   -d '{
     "name": "Test User",
@@ -198,11 +198,11 @@ Or use Postman/Insomnia with the same endpoint and JSON body.
 
 2. **Port already in use:**
    - Change the PORT in `.env` file
-   - Or kill the process using the port: `lsof -ti:5000 | xargs kill`
+   - Or kill the process using the port: `lsof -ti:3001 | xargs kill`
 
 3. **CORS errors:**
    - The server has CORS enabled for all origins
-   - For production, update CORS settings in `server.js`
+   - For production, update CORS settings in `backend/server.js`
 
 4. **Timeout errors:**
    - Check your SMTP credentials

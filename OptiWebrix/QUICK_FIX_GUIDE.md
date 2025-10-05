@@ -18,7 +18,7 @@
 
 ### 1. Update Your SMTP Credentials (IMPORTANT!)
 
-Edit this file: `OptiWebrix/server/.env`
+Edit this file: `OptiWebrix/backend/.env`
 
 ```env
 # Change these values with your actual email credentials:
@@ -108,14 +108,14 @@ npm run dev
 
 ## 📁 Files Changed
 
-- ✏️ `server/.env` - Changed PORT from 5000 to 3001
-- ✏️ `server/server.js` - Updated CORS configuration
-- ✏️ `src/components/ContactForm.jsx` - Updated API_URL to port 3001
-- ✏️ `src/components/Contact.jsx` - Updated API_URL to port 3001
+- ✏️ `backend/.env` - Changed PORT from 5000 to 3001
+- ✏️ `backend/server.js` - Updated CORS configuration
+- ✏️ `frontend/src/components/ContactForm.jsx` - Updated API_URL to port 3001
+- ✏️ `frontend/src/components/Contact.jsx` - Updated API_URL to port 3001
 
 ## 🎯 Next Steps
 
-1. **Update SMTP credentials** in `server/.env`
+1. **Update SMTP credentials** in `backend/.env`
 2. **Test the contact form** on your website
 3. **Check your email** to confirm it works
 4. **Deploy to production** when ready
