@@ -2,6 +2,7 @@ import Hero from "../components/Hero"
 import WearYourStory from "../components/WearYourStory"
 import FeatureCarousel from "../components/FeatureCarousel"
 import PortfolioGrid from "../components/PortfolioGrid"
+import { GlobeDemo } from "../components/GlobeDemo"
 import Timeline from "../components/Timeline"
 import Marquee from "../components/Marquee"
 import ContactForm from "../components/ContactForm"
@@ -19,6 +20,7 @@ export default function Home() {
       <WearYourStory />
       <FeatureCarousel />
       <PortfolioGrid />
+      <GlobeDemo />
       <Timeline />
       <Marquee />
       <ContactForm />
