@@ -3,8 +3,8 @@ import { useTheme } from "../components/theme-provider"
 import { motion } from "framer-motion"
 import { MoonIcon, SunIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 
-import logo from "../assets/webcross-white-logo.png"
-import logoBlack from "../assets/webcross-logo.png"
+import logo from "../assets/OptiWebrix-logo-White.png"
+import logoBlack from "../assets/OptiWebrix-logo-Black.png"
 
 
 import { Link } from "react-router-dom"
