@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { SparklesPreview } from "./SparklesPreview"
 
+
 export default function Footer() {
   return (
     <>
@@ -10,6 +11,8 @@ export default function Footer() {
       {/* Traditional Footer */}
       <footer className="bg-background">
         <SparklesPreview />
+      
+       
         <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
           <nav className="columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
             {["About", "Work", "Services", "Contact", "Privacy", "Terms"].map((item) => (

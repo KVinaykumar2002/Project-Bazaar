@@ -8,6 +8,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Contact from "./components/Contact";
 import Work from "./components/Work";
 import AboutUs from "./components/AboutUs";
+import DrawCircleText from "./components/DrawCircleText";
+import HeroVideoDialogDemo from "./components/HeroVideoDialogDemo";
+import ScrollingBrandLogos from "./components/ScrollingBrandLogos";
 
 export default function App() {
   return (
@@ -23,6 +26,9 @@ export default function App() {
             <Route path="/about" element={<AboutUs />} />
           </Routes>
         </main>
+        <ScrollingBrandLogos />
+        <HeroVideoDialogDemo />
+        <DrawCircleText />
         <Footer />
         <FloatingActionButton />
       </Router>
