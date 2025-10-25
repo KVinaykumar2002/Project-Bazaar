@@ -44,7 +44,7 @@ export default function ContactForm() {
 
   const handleWhatsAppContact = () => {
     // Replace with your actual WhatsApp number
-    const phoneNumber = "9182781986" // Add your WhatsApp number here
+    const phoneNumber = "917013892569" // Add your WhatsApp number here
     const message = encodeURIComponent("Hello! I'm interested in your services. Please contact me.")
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`
     

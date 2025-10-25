@@ -28,7 +28,7 @@ export default function FloatingActionButton() {
   }
 
   const openWhatsApp = () => {
-    const phoneNumber = "+919182781986"
+    const phoneNumber = "+917013892569"
     const message = "Hello OptiWebrix Team! I'm interested in learning more about your services."
     const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank')
