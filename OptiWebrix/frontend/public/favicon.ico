@@ -1,0 +1,24 @@
+data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <!-- Black circle background -->
+  <circle cx="325" cy="250" r="175" fill="%23000000"/>
+  
+  <!-- Horizontal lines with circles -->
+  <!-- Top line -->
+  <circle cx="57" cy="125" r="15" fill="%23000000"/>
+  <rect x="90" y="110" width="60" height="30" rx="15" fill="%23000000"/>
+  <rect x="170" y="110" width="145" height="30" rx="15" fill="%23ffffff"/>
+  <circle cx="370" cy="125" r="15" fill="%23ffffff"/>
+  
+  <!-- Middle line -->
+  <circle cx="42" cy="225" r="18" fill="%23000000"/>
+  <rect x="75" y="210" width="65" height="30" rx="15" fill="%23000000"/>
+  <rect x="160" y="210" width="75" height="30" rx="15" fill="%23ffffff"/>
+  <rect x="275" y="210" width="125" height="30" rx="15" fill="%23ffffff"/>
+  <circle cx="445" cy="225" r="15" fill="%23ffffff"/>
+  
+  <!-- Bottom line -->
+  <circle cx="75" cy="315" r="18" fill="%23000000"/>
+  <rect x="110" y="300" width="65" height="30" rx="15" fill="%23000000"/>
+  <rect x="195" y="300" width="90" height="30" rx="15" fill="%23ffffff"/>
+  <circle cx="405" cy="315" r="15" fill="%23ffffff"/>
+</svg>
